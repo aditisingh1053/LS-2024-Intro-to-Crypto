@@ -1,0 +1,3 @@
+Welcome welcome!
+As you can notice, the actual script has been zipped 100 times.
+If only batcomputer could automate things!

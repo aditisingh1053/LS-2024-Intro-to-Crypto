@@ -1,0 +1,10 @@
+In this script detective I have used RSA but with a small little twist. 
+Standard RSA uses the condition ed==1 modulo phi but not here.
+You have the public and private key list, ofcourse some redacted. The private key has 
+been calculated as follows:
+
+Suppose the index of the private key is i, then it has been calculated by solving the congruence
+(e**i)*d==1 modulo phi where e,d,phi are the ith elements of their list respectively.
+example: d[2] would be calculated as (e[2]**2)*d[2]==1 modulo phi[2] and so on.
+
+Now go on detective, get the flag!
