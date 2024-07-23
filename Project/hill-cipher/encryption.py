@@ -5,6 +5,7 @@ def hill_cipher_encrypt(key_matrix, plaintext):
     n = key_matrix.shape[0]
     plaintext_vector = [ord(char) - ord('a') for char in plaintext]
     ciphertext_vector = np.dot(key_matrix, plaintext_vector) % 26
+    print(ciphertext_vector)
     ciphertext = ''.join(chr(num + ord('a')) for num in ciphertext_vector)
     return ciphertext
 # This whole cell for inputting the key
@@ -16,7 +17,7 @@ if len(key) != 9 or not key.isalpha():
     exit()
 key_numbers = [ord(char) - ord('a') for char in key] #Converting the key into numbers
 key_matrix = np.array(key_numbers).reshape(3, 3) # Converting into a matrix
-# print(key_matrix)
+print(key_matrix)
 print("Enter the input-text")
 myvar=input()
 input_text=myvar.lower().strip().split()

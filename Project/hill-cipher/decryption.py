@@ -2,8 +2,8 @@ import numpy as np
 from math import gcd
 
 # Sample plaintext and ciphertext for testing
-plaintext = "SUMSUMPLANSX"
-ciphertext = "COACOAOZWJBH"
+plaintext = "PRISHACHOUHAN"
+ciphertext = "HKMKQOCOICMOXYZ"
 
 # Function for performing Gaussian elimination to solve linear systems of equations
 def gaussian_elimination(matrix_a, matrix_b):
@@ -115,6 +115,7 @@ def main():
     key_matrix = find_key_matrix(plain_matrix, cipher_matrix)
     if key_matrix is not None:
         print("Key Matrix:\n", key_matrix)
+        key_matrix = np.array(key_matrix)  # Convert to ndarray for rounding
         key_string = "".join([chr(int(round(char)) + 65) for char in key_matrix.flatten()])
         print("Key String:", key_string)
         return
