@@ -2,9 +2,12 @@ import numpy as np
 from math import gcd
 
 # Sample plaintext and ciphertext for testing
-plaintext = "PRISHACHOUHAN"
-ciphertext = "HKMKQOCOICMOXYZ"
-
+# plaintext = "PRISHACHOUHAN"
+# ciphertext = "HKMKQOCOICMOXYZ"
+print("Enter the plain text")
+plaintext=input()
+print("Enter the ciphered text")
+ciphertext=input()
 # Function for performing Gaussian elimination to solve linear systems of equations
 def gaussian_elimination(matrix_a, matrix_b):
     size = len(matrix_a)  # Size of the square matrix
